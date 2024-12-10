@@ -1,16 +1,14 @@
-<nav>
-  <div class="Sectors">
-    <div>
-      <p>C'Shop</p>
+<h1> BIENVENUE CHEZ C'EXPRESS CAMEROUN</h1>
+<P>Votre satisfaction est notre priorité</P>
+
+<div class="sectors-cards">
+  <% @sectors.each do |sector| %>
+    <div class="card-info">
+      <h2><%= sector.name %></h2>
+      <p><%= sector.description %></p>
+      <%= link_to "explorer", sector_path(sector)  %>
     </div>
-    <div>
-      <p>C'Express</p>
-    </div>
-    <div>
-      <p>C'Clean</p>
-    </div>
-    <div>
-      <p>C'Events</p>
-    </div>
-  </div>
-</nav>
+  <% end %>
+
+  <%= link_to "Create sector", sectors_new_path  %>
+</div>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "sectors/index"
 
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
@@ -14,4 +15,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get "about", to: "pages#about"
+  get "sectors", to: "pagess#home"
+  get "sectors/new", to: "sectors#new"
+  get "sectors/:id", to: "sectors#show", as: :sector
+  post "sectors", to: "sectors#create"
+  get "sectors/:id/edit", to: "sectors#edit"
+  patch "sectors/:id", to: "sectors#update", as: :update
 end
+ 

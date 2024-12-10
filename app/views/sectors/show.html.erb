@@ -1,0 +1,8 @@
+ <H1> <%= @sector.name %></H1>
+
+ <p><%= @sector.description %></p>
+
+ <%= link_to "Back", root_path  %>
+ <%= link_to "Edit sector", sectors_new_path(@sector)  %>
+ <%= link_to "delete", sector_path(@sector), data: {turbo_method: :delete, turbo_confirm: "are you sure ?"}  %>
+
