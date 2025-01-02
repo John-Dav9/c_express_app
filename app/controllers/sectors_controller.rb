@@ -1,6 +1,7 @@
 class SectorsController < ApplicationController
   before_action :set_sector, only: [:show, :edit, :update, :destroy]
   def show
+    @products = Product.where(sector: @sector)
   end
 
   def new
@@ -10,12 +11,12 @@ class SectorsController < ApplicationController
   def create
     @sector = Sector.new(params[sector_params])
     if @sector.save
-      redirect_to sector_path(@sector), notice: "Secteur ajoutée avec succès."
+      redirect_to sectors_path, notice: "Secteur ajoutée avec succès."
     else
       render :new, status: :unprocessable_entity
     end
   end
- 
+
   def edit
   end
 
@@ -29,8 +30,14 @@ class SectorsController < ApplicationController
 
 
   def destroy
-     @sector.destroy
-     redirect_to sectors_path, status: :see_other
+    puts params.inspect # Logs the incoming parameters
+    @sector = set_sector
+    if @sector.destroy
+      redirect_to sector_path, notice: "Secteur supprimée avec succès."
+    else
+      puts @sector.errors.full_messages # Logs validation errors
+      redirect_to sector_path(@sector), alert: "Le secteur n'a pas pu être supprimée."
+    end
   end
 
   private

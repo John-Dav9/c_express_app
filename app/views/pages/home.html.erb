@@ -1,14 +1,22 @@
-<h1> BIENVENUE CHEZ C'EXPRESS CAMEROUN</h1>
-<P>Votre satisfaction est notre priorité</P>
+<div class="container mt-5">
+  <h1 class="text-center text-dark mb-4">BIENVENUE CHEZ C'EXPRESS CAMEROUN</h1>
+  <p class="text-center text-secondary">Votre satisfaction est notre priorité</p>
 
-<div class="sectors-cards">
-  <% @sectors.each do |sector| %>
-    <div class="card-info">
-      <h2><%= sector.name %></h2>
-      <p><%= sector.description %></p>
-      <%= link_to "explorer", sector_path(sector)  %>
-    </div>
-  <% end %>
+  <div class="row mt-4 sectors-cards">
+    <% @sectors.each do |sector| %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <h2 class="card-title text-orange"><%= sector.name %></h2>
+            <p class="card-text text-secondary"><%= sector.description %></p>
+            <%= link_to "Explorer", sector_path(sector), class: "btn btn-outline-orange mt-2" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-  <%= link_to "Create sector", sectors_new_path  %>
+  <div class="text-center mt-4">
+    <%= link_to "Créer un Secteur", sectors_new_path, class: "btn btn-orange" %>
+  </div>
 </div>

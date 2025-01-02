@@ -1,3 +1,6 @@
+@import "bootstrap";
+@import "custom";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -13,3 +16,133 @@
  *= require_tree .
  *= require_self
  */
+/* Couleurs Personnalisées homr page */
+.text-orange {
+  color: #ff7f50; /* Orange saumon */
+}
+
+.btn-orange {
+  background-color: #ff7f50; /* Orange saumon */
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e06941; /* Orange plus foncé */
+}
+
+.btn-outline-orange {
+  border: 2px solid #ff7f50; /* Bordure orange */
+  color: #ff7f50;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-orange:hover {
+  background-color: #ff7f50;
+  color: white;
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body {
+  background-color: #f8f9fa; /* Gris clair */
+  color: black;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+/* Alignements */
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Couleurs Personnalisées show c'shop */
+.text-orange {
+  color: #ff7f50; /* Orange saumon */
+}
+
+.btn-orange {
+  background-color: #ff7f50; /* Orange saumon */
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e06941; /* Orange plus foncé */
+}
+
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-body {
+  background-color: #f8f9fa; /* Gris clair */
+  color: black;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Liens secondaires */
+.btn-outline-secondary {
+  border-color: #6c757d;
+  color: #6c757d;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+/* Animations */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #e06941;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: white;
+}
+
+.product-image {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px 5px 0 0;
+}
+

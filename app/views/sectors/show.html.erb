@@ -1,10 +1,37 @@
- <H1> <%= @sector.name %></H1>
+<div class="container mt-5">
+  <h1 class="text-dark text-center mb-4"><%= @sector.name %></h1>
+  <p class="text-secondary text-center mb-4"><%= @sector.description %></p>
 
- <p><%= @sector.description %></p>
- <p><%= @sector.id %></p>
+  <% if @products.any? %>
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm border-0 product-card">
+            <% if product.image.attached? %>
+              <%= image_tag product.image, class: "card-img-top product-image" %>
+            <% else %>
+              <%= image_tag "default-product.jpg", class: "card-img-top product-image" %>
+            <% end %>
+            <div class="card-body">
+              <h3 class="card-title text-orange"><%= product.name %></h3>
+              <p class="card-text text-secondary"><%= product.description %></p>
+              <p class="text-dark font-weight-bold">
+                Prix : <%= number_to_currency(product.price) %>
+              </p>
+              <%= link_to "Voir plus", product_path(product), class: "btn btn-orange btn-block mt-3" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p class="text-center text-muted">Aucun produit disponible dans ce secteur.</p>
+  <% end %>
 
-
- <%= link_to "Back", root_path  %>
- <%= link_to "Edit sector", sectors_new_path(@sector)  %>
- <%= link_to "delete", sector_path(@sector), data: {turbo_method: :delete, turbo_confirm: "are you sure ?"}  %>
-
+  <div class="d-flex justify-content-between mt-4">
+    <%= link_to "Retour", root_path, class: "btn btn-outline-secondary" %>
+    <%= link_to "Ajouter un Produit", products_new_path, class: "btn btn-orange" %>
+    <%= link_to "Modifier le Secteur", sectors_new_path(@sector), class: "btn btn-warning" %>
+    <%= link_to "Supprimer", sector_path(@sector), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %>
+  </div>
+</div>

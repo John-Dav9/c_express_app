@@ -1,6 +1,9 @@
-<%= simple_form_for(@product) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :price %>
-  <%= f.submit %>
+<h1>Add a New Product to a Sector</h1>
+
+<%= simple_form_for Product.new, url: products_path do |f| %>
+  <%= f.input :name, label: "Product Name" %>
+  <%= f.input :description, as: :text, label: "Description" %>
+  <%= f.input :price, as: :decimal, label: "Price", step: 0.01 %>
+  <%= f.input :sector_id, collection: Sector.pluck(:name, :id), as: :select, label: "Select Sector" %>
+  <%= f.button :submit, "Add Product" %>
 <% end %>

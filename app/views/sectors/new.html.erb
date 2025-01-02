@@ -1,5 +1,7 @@
-<%= simple_form_for(@sector) do |f| %>
+<%= simple_form_for Sector.new, url: sectors_path do |f| %>
   <%= f.input :name %>
   <%= f.input :description %>
   <%= f.submit %>
 <% end %>
+
+

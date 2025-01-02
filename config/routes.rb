@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   post "sectors", to: "sectors#create"
   get "sectors/:id/edit", to: "sectors#edit"
   patch "sectors/:id", to: "sectors#update", as: :update
+  delete "sectors/:id", to: "sectors#destroy"
 
   get "products", to: "products#index"
   get "products/new", to: "products#new"
+  post "products", to: "products#create"
 end
- 
