@@ -146,3 +146,19 @@
   border-radius: 5px 5px 0 0;
 }
 
+/* formilaire */
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #ff7f50;
+  border-color: #ff7f50;
+}
+
+.btn-primary:hover {
+  background-color: #e06941;
+  border-color: #e06941;
+}
+

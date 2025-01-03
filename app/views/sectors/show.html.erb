@@ -8,9 +8,9 @@
         <div class="col-md-4 mb-4">
           <div class="card shadow-sm border-0 product-card">
             <% if product.image.attached? %>
-              <%= image_tag product.image, class: "card-img-top product-image" %>
+              <%= image_tag url_for(product.image), class: "card-img-top product-image" %>
             <% else %>
-              <%= image_tag "default-product.jpg", class: "card-img-top product-image" %>
+              <%= image_tag "DEFFAULT.webp", class: "card-img-top product-image" %>
             <% end %>
             <div class="card-body">
               <h3 class="card-title text-orange"><%= product.name %></h3>
@@ -19,6 +19,7 @@
                 Prix : <%= number_to_currency(product.price) %>
               </p>
               <%= link_to "Voir plus", product_path(product), class: "btn btn-orange btn-block mt-3" %>
+              <%= link_to "Modifier", edit_product_path(product), class: "btn btn-warning" %>
             </div>
           </div>
         </div>
@@ -30,7 +31,7 @@
 
   <div class="d-flex justify-content-between mt-4">
     <%= link_to "Retour", root_path, class: "btn btn-outline-secondary" %>
-    <%= link_to "Ajouter un Produit", products_new_path, class: "btn btn-orange" %>
+    <%= link_to "Ajouter un Produit", new_product_path, class: "btn btn-orange" %>
     <%= link_to "Modifier le Secteur", sectors_new_path(@sector), class: "btn btn-warning" %>
     <%= link_to "Supprimer", sector_path(@sector), data: { turbo_method: :delete, turbo_confirm: "Êtes-vous sûr ?" }, class: "btn btn-danger" %>
   </div>
