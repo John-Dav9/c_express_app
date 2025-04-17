@@ -1,24 +1,31 @@
-# README
+# 🚗 Luxe Drive
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Luxe Drive est une plateforme de location de voitures de luxe, inspirée du modèle Airbnb. Elle permet aux utilisateurs de réserver des véhicules haut de gamme en toute simplicité, avec une interface fluide et responsive.
 
-Things you may want to cover:
+## 🛠️ Stack technique
 
-* Ruby version
+- Ruby on Rails
+- PostgreSQL
+- Bootstrap
+- Devise (authentification)
+- Cloudinary (upload images)
 
-* System dependencies
+## 🎯 Fonctionnalités
 
-* Configuration
+- Inscription / Connexion d’utilisateurs
+- Mise en ligne de voitures avec photos et description
+- Réservation de véhicules (dates, durée, prix)
+- Interface responsive mobile / desktop
 
-* Database creation
+## 📷 Aperçus
 
-* Database initialization
+> 
 
-* How to run the test suite
+## ▶️ Installation locale
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```bash
+git clone https://github.com/John-Dav9/rails-luxe-drive.git
+cd rails-luxe-drive
+bundle install
+rails db:create db:migrate db:seed
+rails server
