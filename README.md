@@ -18,8 +18,6 @@ C’Empire est une application web de type e-commerce, développée dans le cadr
 ## ✨ Fonctionnalités
 
 - 🛍️ Catalogue de produits avec description, images et prix
-- 🔍 Système de recherche et filtrage
-- 📝 Formulaire de contact ou de commande
 - ⚙️ Interface d’administration (ajout/modification de produits)
 - 📱 Responsive design (mobile, tablette, desktop)
 
@@ -28,6 +26,27 @@ C’Empire est une application web de type e-commerce, développée dans le cadr
 ## 📸 Aperçu visuel
 
 > 
-```md
-![C’Empire – Page d’accueil](./assets/homepage.png)
+🎯 Objectifs
+Proposer une solution e-commerce simple et personnalisée
+
+Travailler l’UX/UI et la clarté du parcours client
+
+Mettre en place une architecture facile à maintenir et à faire évoluer
+
+💼 Réalisé par
+👤 John Tchomgui
+📍 Développeur web fullstack junior – passionné par les solutions digitales
+📧 tchomguijohn@gmail.com
+🔗 LinkedIn
+🌐 GitHub
+
+🚀 Améliorations futures possibles
+Intégration de paiement en ligne (ex : Orange Money et MTN Money)
+Création de comptes utilisateurs
+Système de recherche et filtrage
+Formulaire de contact ou de commande
+Dashboard statistiques
+Panier d’achat dynamique
+
+
 
